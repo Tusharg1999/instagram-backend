@@ -7,6 +7,10 @@ const userSchema = mongoose.Schema({
     min:6,
     required:true,
   },
+  imageUrl:{
+    type:String,
+    default:''
+  },
   username:{
     type: String,
     min: 8,
@@ -44,7 +48,8 @@ const userSchema = mongoose.Schema({
   token:{
     type:String,
   },
-  followers:[{type:mongoose.Schema.Types.ObjectID}]
+  followers:[{type:mongoose.Schema.Types.ObjectID}],
+  following:[{type:mongoose.Schema.Types.ObjectID}]
 });
 
 const User=mongoose.model("user",userSchema);
