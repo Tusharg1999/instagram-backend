@@ -41,6 +41,9 @@ const userSchema = mongoose.Schema({
   privacy:{
     type:Boolean,
   },
+  token:{
+    type:String,
+  },
   followers:[{type:mongoose.Schema.Types.ObjectID}]
 });
 
