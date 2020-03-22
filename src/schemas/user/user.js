@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
   },
   imageUrl:{
     type:String,
+    date:Buffer,
     default:''
   },
   username:{
